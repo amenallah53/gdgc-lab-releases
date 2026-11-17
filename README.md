@@ -35,15 +35,15 @@ This repository serves as the **public distribution and binary release hub** for
 
 | Version | Build | Release Date | Status |
 | :--- | :--- | :--- | :--- |
-| **v1.0.1+2** | 2 | November 15, 2026 | **Stable (Production)** |
+| **v1.1.0+3** | 3 | November 17, 2026 | **Stable (Production)** |
 
 ### Direct Download Links
 
 | Platform | Format | File Name | Size | Direct Link |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows** | Setup Wizard | `GDGCLab-Setup.exe` | ~ | [⬇️ Download Installer](https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe) |
+| **Windows** | Setup Wizard | `GDGCLab-Setup.exe` | ~18.0 MB | [⬇️ Download Installer](https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe) |
 | **Windows (Update)** | Zip Archive | `GDGCLab-update-win64.zip` | ~19.8 MB | [⬇️ Download Update Zip](https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-update-win64.zip) |
-| **Android** | Universal APK | `GDGCLab-android.apk` | ~70.6 MB | [⬇️ Download APK](https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk) |
+| **Android** | Universal APK | `GDGCLab-android.apk` | ~70.8 MB | [⬇️ Download APK](https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk) |
 | **Web** | Web Application | Cloudflare Pages | Live | [🌐 Open in Browser](https://gdgc-lab.pages.dev) |
 
 ---
@@ -107,10 +107,10 @@ sha256sum GDGCLab-Setup.exe
 sha256sum GDGCLab-android.apk
 ```
 
-**Official Checksums for v1.0.1+2:**
-- `GDGCLab-Setup.exe`: `371a55afa2cd88e85d3f7f9c67522dc2b030cb5125ba4e6226374492d6b4b39c`
-- `GDGCLab-update-win64.zip`: `f142ee3bb1b0a6aa40b1c7083dcf2ebd8949e9ad5277e46c312a6101c041aff1`
-- `GDGCLab-android.apk`: `273aa64e993b295bab166731de204e19221b766c745152db6e025fec87ff146f`
+**Official Checksums for v1.1.0+3:**
+- `GDGCLab-Setup.exe`: `c03d444118b7a92488b852f34364dc4f7d4e103243fecb449e8aa1db2949a601`
+- `GDGCLab-update-win64.zip`: `29aafc0c9fb40b05c62d4c2cd414d5ee85ebb36ad4913a854bf0a988930ee219`
+- `GDGCLab-android.apk`: `ea026cbc7ad3ec484f04cda47dc98e4e9bbadb34d920145a2ae79509f569e5f3`
 
 The same values are published in [`latest.json`](https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/latest.json).
 

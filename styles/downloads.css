@@ -1,0 +1,287 @@
+/* ==========================================================================
+   Downloads Section & Platform Matrix
+   ========================================================================== */
+
+.downloads-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.platform-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Recommended OS Highlight Glow */
+.platform-card.is-detected {
+  border-color: var(--gdgc-blue);
+  background: linear-gradient(180deg, rgba(66, 133, 244, 0.08) 0%, var(--surface) 40%);
+  box-shadow: 0 0 32px rgba(66, 133, 244, 0.25),
+              0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.platform-detected-ribbon {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(66, 133, 244, 0.2);
+  color: #70A4FF;
+  border: 1px solid rgba(66, 133, 244, 0.4);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.platform-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.platform-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+}
+
+.platform-card:hover .platform-icon-box {
+  transform: scale(1.08);
+}
+
+.platform-icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+
+.platform-icon-windows { color: #00ADEF; }
+.platform-icon-android { color: #3DDC84; }
+.platform-icon-web     { color: #4285F4; }
+.platform-icon-apple   { color: #A2AAAD; }
+.platform-icon-linux   { color: #FCC624; }
+
+.platform-title-group h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.platform-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.platform-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform-specs {
+  list-style: none;
+  margin: 18px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(42, 51, 82, 0.6);
+}
+
+.spec-label {
+  color: var(--text-muted);
+}
+
+.spec-val {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.platform-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn-platform-download {
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+/* Secondary Actions inside Card (Zip update / sha) */
+.platform-secondary-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding-top: 8px;
+}
+
+.platform-secondary-links a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.platform-secondary-links a:hover {
+  color: var(--gdgc-blue);
+}
+
+/* Coming Soon Cards */
+.platform-card.is-disabled {
+  opacity: 0.75;
+  background: rgba(16, 21, 42, 0.5);
+}
+
+.platform-card.is-disabled:hover {
+  transform: none;
+  border-color: var(--border);
+}
+
+/* SHA256 Verification Collapsible */
+.sha-box {
+  margin-top: 10px;
+  background: rgba(7, 10, 20, 0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sha-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-copy-sha {
+  background: transparent;
+  border: none;
+  color: var(--cyan);
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  border-radius: 4px;
+  transition: background var(--transition-fast);
+}
+
+.btn-copy-sha:hover {
+  background: rgba(34, 211, 238, 0.15);
+}
+
+/* OS Switcher Toolbar */
+.platform-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.toolbar-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.toolbar-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.toolbar-btn.active {
+  background: rgba(66, 133, 244, 0.15);
+  border-color: var(--gdgc-blue);
+  color: #FFFFFF;
+}
+
+.toolbar-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 992px) {
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
+  }
+}

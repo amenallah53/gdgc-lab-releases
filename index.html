@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDGC FST Lab — Official Downloads & Releases</title>
+  <meta name="description" content="Official download portal for GDGC FST Lab: the on-campus learning and builder hub for developers at Faculté des Sciences de Tunis. Download for Windows, Android, or launch the Web App." />
+  <meta name="theme-color" content="#070A14" />
+  <link rel="canonical" href="https://amenallah53.github.io/gdgc-lab-releases/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amenallah53.github.io/gdgc-lab-releases/" />
+  <meta property="og:title" content="GDGC FST Lab — Official Downloads & Releases" />
+  <meta property="og:description" content="Download GDGC FST Lab for Windows and Android. Interactive classroom coursework, hackathons, and live 3D leaderboards for GDGC members." />
+  <meta property="og:image" content="https://amenallah53.github.io/gdgc-lab-releases/assets/images/app_icon.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GDGC FST Lab — Downloads & Releases" />
+  <meta name="twitter:description" content="Download GDGC FST Lab for Windows and Android. Built with Flutter for student developers." />
+  <meta name="twitter:image" content="https://amenallah53.github.io/gdgc-lab-releases/assets/images/app_icon.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/icon-192.png" />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/hero.css" />
+  <link rel="stylesheet" href="styles/downloads.css" />
+  <link rel="stylesheet" href="styles/releases.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+
+  <style>
+    /* Inline Mobile Drawer Styles */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 76px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(7, 10, 20, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 99;
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mobile-drawer.is-open {
+      display: flex;
+    }
+    .mobile-nav-link {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    /* Ambient Doodles */
+    #ambient-doodles-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .doodle-tag {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: rgba(184, 192, 214, 0.12);
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      user-select: none;
+      animation: doodle-float 8s ease-in-out infinite alternate;
+    }
+    @keyframes doodle-float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- Ambient Doodles Container -->
+  <div id="ambient-doodles-container"></div>
+
+  <!-- ========================================================================
+       Navigation Bar
+       ======================================================================== -->
+  <nav class="site-nav" id="main-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-link" aria-label="GDGC FST Lab Home">
+        <img src="assets/images/gdgc_fst_logo.png" alt="GDGC FST Logo" class="brand-logo" width="40" height="40" />
+        <div class="brand-meta">
+          <span class="brand-title">GDGC Lab <span style="font-size: 0.7em; opacity: 0.6;">FST</span></span>
+          <span class="brand-tag">Student Developer Hub</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Overview</a></li>
+        <li><a href="#downloads" class="nav-link">Downloads</a></li>
+        <li><a href="#releases" class="nav-link">Releases</a></li>
+        <li><a href="#community" class="nav-link">Community</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          Launch Web App
+        </a>
+        <a href="https://github.com/amenallah53/gdgc-lab-releases" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Releases Repository">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          Releases
+        </a>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="#features" class="mobile-nav-link">Overview & Features</a>
+    <a href="#downloads" class="mobile-nav-link">Downloads</a>
+    <a href="#releases" class="mobile-nav-link">Latest Releases</a>
+    <a href="#community" class="mobile-nav-link">Community & About</a>
+    <a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 16px;">
+      Launch Web App ↗
+    </a>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         Hero Section
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Copy Column -->
+        <div class="hero-copy animate-on-scroll">
+          <a href="#releases" class="badge badge-blue badge-pulse hero-pill">
+            🚀 GDGC FST Lab <span class="js-latest-tag">v1.0.1+2</span> · <span class="js-latest-date">Latest Release</span>
+          </a>
+
+          <h1 class="hero-title">
+            The On-Campus Learning &amp; <span class="gradient-text">Builder Hub</span>
+          </h1>
+
+          <p class="hero-description">
+            Interactive coursework, workshop materials, chapter hackathons, and a live competitive 3D leaderboard — crafted with Flutter for student developers at Faculté des Sciences de Tunis.
+          </p>
+
+          <div class="hero-ctas">
+            <!-- Smart Auto-Detected Primary Download Button -->
+            <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe" id="hero-smart-download" class="btn-smart-download btn-ripple">
+              <img src="assets/icons/windows.svg" class="platform-icon" alt="Windows" width="22" height="22" />
+              <span class="cta-text-wrap">
+                <span class="cta-label">Download for Windows</span>
+                <span class="cta-sublabel">GDGCLab-Setup.exe · 18.0 MB</span>
+              </span>
+            </a>
+
+            <!-- Secondary Actions -->
+            <a href="#downloads" class="btn btn-lg btn-secondary">
+              All Platforms ↓
+            </a>
+          </div>
+
+          <!-- Hero Trust & Proof Points -->
+          <div class="hero-proof">
+            <div class="hero-proof-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Verified Releases</span>
+            </div>
+            <div class="hero-proof-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>OTA Patch Enabled</span>
+            </div>
+            <div class="hero-proof-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              <span>Free &amp; Open</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 3D Showcase Column -->
+        <div class="hero-visual animate-on-scroll delay-200">
+          <div class="showcase-wrapper">
+            <!-- Floating Stickers -->
+            <div class="sticker sticker-flutter">
+              <img src="assets/icons/flutter.svg" alt="Flutter" width="38" height="38" />
+            </div>
+            <div class="sticker sticker-dart">
+              <img src="assets/icons/dart.svg" alt="Dart" width="32" height="32" />
+            </div>
+            <div class="sticker sticker-code">&lt;GDGC /&gt;</div>
+            <div class="sticker sticker-pill">
+              <span>⚡ Live Podium</span>
+            </div>
+
+            <!-- Main Showcase Glass Card -->
+            <div class="showcase-card">
+              <div class="showcase-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="showcase-badge">CHAPTER LIVE RANKINGS</span>
+              </div>
+
+              <!-- 3D Podium Graphic from App -->
+              <div class="podium-stage">
+                <img src="assets/images/podium_3d.png" alt="GDGC Lab 3D Leaderboard Podium" class="podium-img" width="260" height="260" />
+                <span class="podium-caption">
+                  🏆 Top Chapter Finisher Podium
+                </span>
+              </div>
+
+              <!-- Mini Stats Grid -->
+              <div class="showcase-stats">
+                <div class="mini-stat">
+                  <div class="mini-stat-val">3</div>
+                  <div class="mini-stat-lbl">Spaces</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-val">OTA</div>
+                  <div class="mini-stat-lbl">Patches</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-val">100%</div>
+                  <div class="mini-stat-lbl">Dark/Light</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Principal Spaces (Features Section)
+         ====================================================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="badge badge-violet section-tag">Architected For Builders</span>
+          <h2 class="section-title">Three Core Spaces, One Platform</h2>
+          <p class="section-subtitle">
+            GDGC FST Lab organizes chapter life around real student activities: learning coursework, competing in challenges, and celebrating achievements.
+          </p>
+        </div>
+
+        <div class="features-bento">
+          <!-- Card 1: Classroom -->
+          <div class="feature-bento-card animate-on-scroll delay-100">
+            <div class="feature-bento-icon icon-blue-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>Classroom Space</h3>
+            <p>
+              Your central hub for session materials, PDF guides, code exercises, and assignment submissions with real-time instructor reviews.
+            </p>
+            <ul>
+              <li>Workshop libraries &amp; resources</li>
+              <li>Assignment deadline tracker</li>
+              <li>In-app attachment previewer</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Contests -->
+          <div class="feature-bento-card animate-on-scroll delay-200">
+            <div class="feature-bento-icon icon-yellow-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <h3>Contests &amp; Hackathons</h3>
+            <p>
+              Participate in club coding challenges, solve real-world problems, submit repositories, and earn points on the chapter scoreboard.
+            </p>
+            <ul>
+              <li>Timed challenge statements</li>
+              <li>Automated &amp; admin evaluations</li>
+              <li>Instant feedback &amp; point awarding</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Member Hub & Podium -->
+          <div class="feature-bento-card animate-on-scroll delay-300">
+            <div class="feature-bento-icon icon-violet-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <h3>Live 3D Leaderboard</h3>
+            <p>
+              Gamified progress tracking with an expressive 3D podium, member rankings, and dynamic competency radar charts measuring mastery.
+            </p>
+            <ul>
+              <li>Real-time ranking positions</li>
+              <li>Skill radar domain charts</li>
+              <li>Weekly pace &amp; streak tracker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Downloads Section
+         ====================================================================== -->
+    <section class="downloads-section" id="downloads">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="badge badge-blue section-tag">Cross-Platform Distribution</span>
+          <h2 class="section-title">Download For Your Platform</h2>
+          <p class="section-subtitle">
+            Get the native desktop experience or install the Android mobile app. All releases are signed, checksummed, and hosted directly on GitHub Releases.
+          </p>
+        </div>
+
+        <!-- Filter Toolbar -->
+        <div class="platform-toolbar animate-on-scroll">
+          <button class="toolbar-btn active" data-filter="all">All Options</button>
+          <button class="toolbar-btn" data-filter="windows">
+            <img src="assets/icons/windows.svg" alt="Windows" width="16" height="16" /> Windows
+          </button>
+          <button class="toolbar-btn" data-filter="android">
+            <img src="assets/icons/android.svg" alt="Android" width="16" height="16" /> Android
+          </button>
+          <button class="toolbar-btn" data-filter="web">
+            <img src="assets/icons/web.svg" alt="Web" width="16" height="16" /> Web
+          </button>
+        </div>
+
+        <!-- Platform Cards Grid -->
+        <div class="platform-grid">
+          <!-- 1. WINDOWS CARD -->
+          <div class="platform-card animate-on-scroll delay-100" data-platform="windows">
+            <div class="platform-header">
+              <div class="platform-icon-box platform-icon-windows">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.8"/></svg>
+              </div>
+              <div class="platform-title-group">
+                <h3>Windows</h3>
+                <div class="platform-meta">
+                  <span class="badge badge-green">Recommended</span>
+                  <span class="js-latest-tag">v1.0.1+2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-body">
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Standalone Windows installer. Sets up desktop and Start menu shortcuts with background updater launcher.
+              </p>
+
+              <ul class="platform-specs">
+                <li class="spec-item">
+                  <span class="spec-label">Format</span>
+                  <span class="spec-val">Setup Wizard (.exe)</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">File Size</span>
+                  <span class="spec-val" id="size-windows">18.0 MB</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Requirements</span>
+                  <span class="spec-val">Windows 10 / 11 64-bit</span>
+                </li>
+              </ul>
+
+              <div class="platform-actions">
+                <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe" id="btn-download-windows" class="btn btn-primary btn-platform-download">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download Installer (.exe)
+                </a>
+
+                <div class="platform-secondary-links">
+                  <span>Delta Update:</span>
+                  <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-update-win64.zip" id="link-windows-zip">GDGCLab-update-win64.zip (<span id="size-windows-zip">19.8 MB</span>)</a>
+                </div>
+
+                <!-- SHA256 Box -->
+                <div class="sha-box">
+                  <span class="sha-text" id="sha-windows">Installer SHA256: 371a55afa2cd...</span>
+                  <button class="btn-copy-sha" id="copy-sha-windows" data-sha="371a55afa2cd88e85d3f7f9c67522dc2b030cb5125ba4e6226374492d6b4b39c" title="Copy full SHA256">Copy</button>
+                </div>
+                <div class="sha-box">
+                  <span class="sha-text" id="sha-windows-zip">Update ZIP SHA256: f142ee3bb1b0...</span>
+                  <button class="btn-copy-sha" id="copy-sha-windows-zip" data-sha="f142ee3bb1b0a6aa40b1c7083dcf2ebd8949e9ad5277e46c312a6101c041aff1" title="Copy full SHA256">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ANDROID CARD -->
+          <div class="platform-card animate-on-scroll delay-200" data-platform="android">
+            <div class="platform-header">
+              <div class="platform-icon-box platform-icon-android">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.5516 0 .9998.4486.9998 1.0001s-.4482 1.0001-.9998 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.5516 0 .9998.4486.9998 1.0001s-.4482 1.0001-.9998 1.0001m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125s-3.5902.2866-5.1368.8247L4.8409 5.4467a.4161.4161 0 0 0-.5677-.1521.4157.4157 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
+              </div>
+              <div class="platform-title-group">
+                <h3>Android</h3>
+                <div class="platform-meta">
+                  <span class="badge badge-blue">Direct APK</span>
+                  <span class="js-latest-tag">v1.0.1+2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-body">
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Universal Android application package with Shorebird OTA code-push for seamless updates without reinstalling.
+              </p>
+
+              <ul class="platform-specs">
+                <li class="spec-item">
+                  <span class="spec-label">Format</span>
+                  <span class="spec-val">Standalone APK (.apk)</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">File Size</span>
+                  <span class="spec-val" id="size-android">70.6 MB</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Requirements</span>
+                  <span class="spec-val">Android 8.0+ (API 26+)</span>
+                </li>
+              </ul>
+
+              <div class="platform-actions">
+                <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk" id="btn-download-android" class="btn btn-primary btn-platform-download">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download APK (.apk)
+                </a>
+
+                <div class="platform-secondary-links">
+                  <span>Code-Push:</span>
+                  <span style="color: var(--cyan);">Shorebird Patch Enabled</span>
+                </div>
+
+                <!-- SHA256 Box -->
+                <div class="sha-box">
+                  <span class="sha-text" id="sha-android">SHA256: 273aa64e993b...</span>
+                  <button class="btn-copy-sha" id="copy-sha-android" data-sha="273aa64e993b295bab166731de204e19221b766c745152db6e025fec87ff146f" title="Copy full SHA256">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. WEB APP CARD -->
+          <div class="platform-card animate-on-scroll delay-300" data-platform="web">
+            <div class="platform-header">
+              <div class="platform-icon-box platform-icon-web">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="platform-title-group">
+                <h3>Web Application</h3>
+                <div class="platform-meta">
+                  <span class="badge badge-green">Zero Install</span>
+                  <span>Cloudflare Pages</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-body">
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Run GDGC FST Lab immediately inside your browser. Synchronized with your chapter account from any operating system.
+              </p>
+
+              <ul class="platform-specs">
+                <li class="spec-item">
+                  <span class="spec-label">Type</span>
+                  <span class="spec-val">PWA / Web App</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Domain</span>
+                  <span class="spec-val">gdgc-lab.pages.dev</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Browser</span>
+                  <span class="spec-val">Chrome, Edge, Safari, Firefox</span>
+                </li>
+              </ul>
+
+              <div class="platform-actions">
+                <a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-platform-download">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Open In Browser ↗
+                </a>
+                <div class="platform-secondary-links">
+                  <span>Deployment:</span>
+                  <span style="color: var(--text-muted);">Global Edge CDN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. macOS (Coming Soon) -->
+          <div class="platform-card is-disabled animate-on-scroll delay-100" data-platform="macos">
+            <div class="platform-header">
+              <div class="platform-icon-box platform-icon-apple">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.87c.6-1.04 1.01-2.49.8-3.87-1.18.05-2.61.79-3.45 1.77-.55.93-.97 2.42-.77 3.8 1.33.1 2.82-.66 3.42-1.7"/></svg>
+              </div>
+              <div class="platform-title-group">
+                <h3>macOS</h3>
+                <div class="platform-meta">
+                  <span class="badge" style="background: rgba(255,255,255,0.08); color: var(--text-muted);">In Development</span>
+                </div>
+              </div>
+            </div>
+            <div class="platform-body">
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Native Apple Silicon &amp; Intel desktop DMG builds are in preparation. Use the Web App on macOS in the meantime.
+              </p>
+              <div class="platform-actions">
+                <a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-platform-download">
+                  Use Web App on macOS ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Linux (Coming Soon) -->
+          <div class="platform-card is-disabled animate-on-scroll delay-200" data-platform="linux">
+            <div class="platform-header">
+              <div class="platform-icon-box platform-icon-linux">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.002 0c-2.457 0-4.47 2.013-4.47 4.47 0 .524.088 1.026.25 1.492C6.46 6.388 5.25 7.82 5.25 9.537c0 1.25.64 2.348 1.61 2.993-.07.41-.11.83-.11 1.26 0 3.797 2.35 6.87 5.252 6.87s5.252-3.073 5.252-6.87c0-.43-.04-.85-.11-1.26.97-.645 1.61-1.743 1.61-2.993 0-1.717-1.21-3.15-2.532-3.575.162-.466.25-.968.25-1.492C16.472 2.013 14.46 0 12.002 0z"/></svg>
+              </div>
+              <div class="platform-title-group">
+                <h3>Linux</h3>
+                <div class="platform-meta">
+                  <span class="badge" style="background: rgba(255,255,255,0.08); color: var(--text-muted);">In Development</span>
+                </div>
+              </div>
+            </div>
+            <div class="platform-body">
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Linux AppImage and tarball packages will be published soon. In the meantime, launch the Web App directly on Linux.
+              </p>
+              <div class="platform-actions">
+                <a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-platform-download">
+                  Use Web App on Linux ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Latest Release & Changelog Section
+         ====================================================================== -->
+    <section class="releases-section" id="releases">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="badge badge-green section-tag">Release Notes</span>
+          <h2 class="section-title">Latest Published Release</h2>
+          <p class="section-subtitle">
+            Stay up to date with new features, bug fixes, and performance improvements across all chapter modules.
+          </p>
+        </div>
+
+        <!-- Latest Release Card -->
+        <div class="release-feature-card animate-on-scroll">
+          <div class="release-feature-header">
+            <div class="release-title-row">
+              <span class="release-tag-badge js-latest-tag">v1.0.1+2</span>
+              <h3 id="latest-release-name" style="font-size: 1.4rem;">GDGC FST Lab 1.0.1 (build 2)</h3>
+              <span class="release-date js-latest-date">Published Nov 15, 2026</span>
+            </div>
+            <a href="https://github.com/amenallah53/gdgc-lab-releases/releases" target="_blank" rel="noopener noreferrer" id="latest-release-github-link" class="btn btn-sm btn-outline">
+              View on GitHub ↗
+            </a>
+          </div>
+
+          <!-- Notes -->
+          <div class="release-notes-content" id="latest-release-notes">
+            <strong>GDGC FST Lab 1.0.1 (build 2)</strong><br><br>
+            Windows: download and run <code>GDGCLab-Setup.exe</code>. It installs the application and creates a desktop shortcut.<br>
+            Android: download <code>GDGCLab-android.apk</code>.<br>
+            <code>GDGCLab-update-win64.zip</code> is downloaded automatically by the Windows launcher; manual download is optional.
+          </div>
+
+          <!-- Release Assets Quick List -->
+          <div class="release-assets-grid">
+            <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe" id="asset-windows" class="release-asset-item">
+              <div class="asset-info">
+                <svg class="asset-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.8"/></svg>
+                <div>
+                  <div class="asset-name">GDGCLab-Setup.exe</div>
+                  <div class="asset-size" id="asset-size-windows">Windows Installer · 18.0 MB</div>
+                </div>
+              </div>
+              <span>↓</span>
+            </a>
+
+            <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk" id="asset-android" class="release-asset-item">
+              <div class="asset-info">
+                <svg class="asset-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.5516 0 .9998.4486.9998 1.0001s-.4482 1.0001-.9998 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.5516 0 .9998.4486.9998 1.0001s-.4482 1.0001-.9998 1.0001m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125s-3.5902.2866-5.1368.8247L4.8409 5.4467a.4161.4161 0 0 0-.5677-.1521.4157.4157 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
+                <div>
+                  <div class="asset-name">GDGCLab-android.apk</div>
+                  <div class="asset-size" id="asset-size-android">Android Package · 70.6 MB</div>
+                </div>
+              </div>
+              <span>↓</span>
+            </a>
+
+            <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-update-win64.zip" id="asset-windows-zip" class="release-asset-item">
+              <div class="asset-info">
+                <svg class="asset-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <div>
+                  <div class="asset-name">GDGCLab-update-win64.zip</div>
+                  <div class="asset-size" id="asset-size-windows-zip">Windows Delta Zip · 19.8 MB</div>
+                </div>
+              </div>
+              <span>↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Previous Versions History -->
+        <div class="history-section animate-on-scroll">
+          <div class="history-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 800;">Release Archive</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Access historical binaries and release tags.</p>
+              </div>
+              <a href="https://github.com/amenallah53/gdgc-lab-releases/releases" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                All GitHub Tags ↗
+              </a>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Tag</th>
+                    <th>Release Name</th>
+                    <th>Date</th>
+                    <th>Downloads</th>
+                  </tr>
+                </thead>
+                <tbody id="releases-history-tbody">
+                  <tr>
+                    <td><span class="badge badge-blue">v1.0.1+2</span></td>
+                    <td><strong>GDGC FST Lab 1.0.1 (build 2)</strong></td>
+                    <td>Nov 15, 2026</td>
+                    <td>
+                      <div style="display: flex; gap: 8px;">
+                        <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe" class="btn btn-sm btn-secondary">Windows .exe</a>
+                        <a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk" class="btn btn-sm btn-secondary">Android .apk</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Community Section
+         ====================================================================== -->
+    <section class="community-section" id="community">
+      <div class="container">
+        <div class="community-card animate-on-scroll">
+          <span class="badge badge-violet" style="margin-bottom: 16px;">Built By Developers, For Developers</span>
+          <h2>Join the GDGC FST Community</h2>
+          <p>
+            Google Developer Groups on Campus at Faculté des Sciences de Tunis is a passionate community of university students discovering Flutter, Cloud, AI, and modern web development.
+          </p>
+          <div class="community-links">
+            <a href="https://github.com/amenallah53/gdgc-lab-releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              Star Releases on GitHub
+            </a>
+            <a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Open Web Application ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-link">
+            <img src="assets/images/gdgc_fst_logo.png" alt="GDGC FST Logo" class="brand-logo" width="36" height="36" />
+            <span class="brand-title">GDGC FST Lab</span>
+          </a>
+          <p>
+            The on-campus developer learning hub for Google Developer Groups on Campus at Faculté des Sciences de Tunis.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platforms</h5>
+          <ul class="footer-links">
+            <li><a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe">Windows (.exe)</a></li>
+            <li><a href="https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk">Android (.apk)</a></li>
+            <li><a href="https://gdgc-lab.pages.dev" target="_blank" rel="noopener noreferrer">Web Application ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul class="footer-links">
+            <li><a href="#releases">Release Notes</a></li>
+            <li><a href="https://github.com/amenallah53/gdgc-lab-releases/releases">GitHub Releases</a></li>
+            <li><a href="https://github.com/amenallah53/gdgc-lab-releases/issues">Report an Issue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Community</h5>
+          <ul class="footer-links">
+            <li><a href="https://gdsc.community.dev" target="_blank" rel="noopener noreferrer">GDGC Community ↗</a></li>
+            <li><a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">Built with Flutter ↗</a></li>
+            <li><a href="https://shorebird.dev" target="_blank" rel="noopener noreferrer">Shorebird Code Push ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 GDGC FST Lab. Designed for Google Developer Groups on Campus — FST Chapter.
+        </div>
+        <div style="font-size: 0.8rem; opacity: 0.8;">
+          All trademarks and logos belong to their respective owners.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/os-detector.js"></script>
+  <script src="scripts/releases.js"></script>
+  <script src="scripts/stickers.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,72 @@
+{
+  "version": "1.1.1+5",
+  "buildNumber": 5,
+  "tag": "v1.1.1+5",
+  "name": "GDGC FST Lab 1.1.1 (build 5)",
+  "publishedAt": "2026-11-20T21:29:38Z",
+  "notes": "GDGC FST Lab 1.1.1 (build 5)\n\nWindows: download and run **GDGCLab-Setup.exe**. It installs the app and creates a desktop shortcut.\nAndroid: download **GDGCLab-android.apk**.\n`GDGCLab-update-win64.zip` is downloaded automatically by the Windows launcher; do not download it manually.",
+  "htmlUrl": "https://github.com/amenallah53/gdgc-lab-releases/releases/tag/v1.1.1%2B5",
+  "releasesUrl": "https://github.com/amenallah53/gdgc-lab-releases/releases",
+  "repo": "amenallah53/gdgc-lab-releases",
+  "platforms": {
+    "windows": {
+      "name": "Windows",
+      "available": true,
+      "version": "1.1.1+5",
+      "format": "Setup Installer (.exe)",
+      "filename": "GDGCLab-Setup.exe",
+      "sizeBytes": 19124807,
+      "sizeFormatted": "18.2 MB",
+      "downloadUrl": "https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-Setup.exe",
+      "requirements": "Windows 10 / 11 64-bit (x64)",
+      "sha256": "d1b7d8520f1cb30e9bd3a980800bcb80c019e94585114bffd613e606fc421a57",
+      "secondary": {
+        "label": "Update Zip Package (.zip)",
+        "filename": "GDGCLab-update-win64.zip",
+        "downloadUrl": "https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-update-win64.zip",
+        "sizeBytes": 21182478,
+        "sizeFormatted": "20.2 MB",
+        "sha256": "2751566e6c1c7aaf87cc6b23f7082399ada53cdf207046983be14ca20a0cbb96"
+      }
+    },
+    "android": {
+      "name": "Android",
+      "available": true,
+      "version": "1.1.1+5",
+      "format": "Universal APK (.apk)",
+      "filename": "GDGCLab-android.apk",
+      "sizeBytes": 72436127,
+      "sizeFormatted": "69.1 MB",
+      "downloadUrl": "https://github.com/amenallah53/gdgc-lab-releases/releases/latest/download/GDGCLab-android.apk",
+      "requirements": "Android 8.0+ (Oreo, API 26+)",
+      "sha256": "0819848854e65f2cbd4af3b7241af46fea85436496ae08c756cf987d75b35678",
+      "secondary": {
+        "label": "Shorebird OTA",
+        "notes": "Supports seamless background patches without full reinstall"
+      }
+    },
+    "web": {
+      "name": "Web App",
+      "available": true,
+      "version": "Live Cloudflare Pages",
+      "format": "PWA / Web App",
+      "url": "https://gdgc-lab.pages.dev",
+      "requirements": "Modern browser (Chrome, Edge, Firefox, Safari)",
+      "notes": "Zero installation needed; accessible from any device"
+    },
+    "macos": {
+      "name": "macOS",
+      "available": false,
+      "format": "Universal DMG",
+      "status": "In Development",
+      "notes": "macOS builds are in preparation. Star the GitHub repo to get notified."
+    },
+    "linux": {
+      "name": "Linux",
+      "available": false,
+      "format": "AppImage / Tarball",
+      "status": "In Development",
+      "notes": "Linux builds will be packaged with future releases."
+    }
+  }
+}

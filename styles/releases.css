@@ -1,0 +1,289 @@
+/* ==========================================================================
+   Releases Section, Changelog & Community
+   ========================================================================== */
+
+.releases-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.release-feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.release-feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.release-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.release-tag-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gdgc-blue);
+  background: rgba(66, 133, 244, 0.12);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(66, 133, 244, 0.3);
+}
+
+.release-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.release-notes-content {
+  background: rgba(7, 10, 20, 0.6);
+  border: 1px solid rgba(42, 51, 82, 0.7);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.release-notes-content ul {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.release-notes-content code {
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* Release Assets Quick Grid */
+.release-assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.release-asset-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+}
+
+.release-asset-item:hover {
+  background: var(--surface-highlight);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.asset-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asset-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--gdgc-blue);
+}
+
+.asset-name {
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+.asset-size {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Previous Versions Section */
+.history-section {
+  margin-top: 32px;
+}
+
+.history-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px 32px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.history-table th {
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table td {
+  padding: 16px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(42, 51, 82, 0.4);
+  color: var(--text-secondary);
+}
+
+.history-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Features Bento Grid (Principal Spaces) */
+.features-section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.features-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-bento-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-bento-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-bento-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.feature-bento-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-blue-bg   { background: rgba(66, 133, 244, 0.12); color: var(--gdgc-blue); border: 1px solid rgba(66, 133, 244, 0.25); }
+.icon-yellow-bg { background: rgba(251, 188, 4, 0.12);  color: var(--gdgc-yellow); border: 1px solid rgba(251, 188, 4, 0.25); }
+.icon-violet-bg { background: rgba(124, 92, 255, 0.12); color: var(--violet-bright); border: 1px solid rgba(124, 92, 255, 0.25); }
+
+.feature-bento-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.feature-bento-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.feature-bento-card ul {
+  list-style: none;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feature-bento-card li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.feature-bento-card li::before {
+  content: '✓';
+  color: var(--gdgc-green);
+  font-weight: 800;
+}
+
+/* Community Callout */
+.community-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.community-card {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.1) 0%, rgba(124, 92, 255, 0.12) 50%, rgba(34, 211, 238, 0.08) 100%),
+              var(--surface);
+  border: 1px solid rgba(66, 133, 244, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 60px 48px;
+  text-align: center;
+  box-shadow: var(--shadow-glow);
+}
+
+.community-card h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 16px;
+}
+
+.community-card p {
+  max-width: 640px;
+  margin: 0 auto 32px auto;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.community-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .features-bento {
+    grid-template-columns: 1fr;
+  }
+}
